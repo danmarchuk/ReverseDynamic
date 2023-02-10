@@ -45,7 +45,6 @@
 		93139ECA2987FF4B0072F6FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93139ECD2987FF4B0072F6FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93139ECF2987FF4B0072F6FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9361784129946CA70054106B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		93F3B92C299234EA001277AB /* ReverseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReverseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93F3B92E299234EA001277AB /* ReverseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseUITests.swift; sourceTree = "<group>"; };
 		93F3B930299234EA001277AB /* ReverseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -108,7 +107,6 @@
 				93139ECA2987FF4B0072F6FC /* Assets.xcassets */,
 				93139ECC2987FF4B0072F6FC /* LaunchScreen.storyboard */,
 				93139ECF2987FF4B0072F6FC /* Info.plist */,
-				9361784129946CA70054106B /* README.md */,
 			);
 			path = Reverse;
 			sourceTree = "<group>";
