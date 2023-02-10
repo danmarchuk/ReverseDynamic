@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ReverseApp: UIViewController {
+class ViewController: UIViewController {
     
 
     @IBOutlet weak var grayBlueView: UIView!
@@ -78,7 +78,7 @@ class ReverseApp: UIViewController {
 }
 
 
-extension ReverseApp: UITextFieldDelegate {
+extension ViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
             viewBecomesBlue()
             textField.becomeFirstResponder()
@@ -99,9 +99,9 @@ extension ReverseApp: UITextFieldDelegate {
 }
 
 // MARK: - dismissKeyboard when tapped around
-extension ReverseApp {
+extension ViewController {
     func hideKeyboardWhenTappedAround() {
-        let tap = UITapGestureRecognizer(target: self, action: #selector(ReverseApp.dismissKeyboard))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
     }

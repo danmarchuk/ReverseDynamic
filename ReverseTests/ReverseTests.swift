@@ -12,7 +12,7 @@ class ReverseTests: XCTestCase {
     
     // for some reason the tests don't work propperly
     func test_reverseAString() {
-        let reverse = ReverseApp()
+        let reverse = ViewController()
         let reverseFunc =  reverse.reverseFunction(text: "Test string")
         let expectedResult = "tseT gnirts"
         print(reverseFunc)
@@ -22,7 +22,7 @@ class ReverseTests: XCTestCase {
     
     
     func test_reverseAnotherString() {
-        let reverse = ReverseApp()
+        let reverse = ViewController()
         let reverseFunc =  reverse.reverseFunction(text: "Hello Obama")
         let expectedResult = "olleH amabO"
         XCTAssertTrue(reverseFunc == expectedResult)
