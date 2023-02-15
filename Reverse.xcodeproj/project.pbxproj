@@ -13,10 +13,10 @@
 		93139ECB2987FF4B0072F6FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93139ECA2987FF4B0072F6FC /* Assets.xcassets */; };
 		93139ECE2987FF4B0072F6FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93139ECC2987FF4B0072F6FC /* LaunchScreen.storyboard */; };
 		9353FBCF29925F20009721B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93139EC52987FF490072F6FC /* ViewController.swift */; };
-		9353FBD029925F22009721B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93139EC52987FF490072F6FC /* ViewController.swift */; };
 		9353FBD32992612C009721B2 /* ReverseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F3B94029924F21001277AB /* ReverseTests.swift */; };
 		93F3B931299234EA001277AB /* ReverseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F3B930299234EA001277AB /* ReverseUITestsLaunchTests.swift */; };
 		93F3B9392992378F001277AB /* ReverseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F3B92E299234EA001277AB /* ReverseUITests.swift */; };
+		93F5BF18299C01CD0058CCAB /* ReverseBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F5BF17299C01CD0058CCAB /* ReverseBrain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +50,7 @@
 		93F3B930299234EA001277AB /* ReverseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		93F3B93E29924F21001277AB /* ReverseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReverseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93F3B94029924F21001277AB /* ReverseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseTests.swift; sourceTree = "<group>"; };
+		93F5BF17299C01CD0058CCAB /* ReverseBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseBrain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +108,7 @@
 				93139ECA2987FF4B0072F6FC /* Assets.xcassets */,
 				93139ECC2987FF4B0072F6FC /* LaunchScreen.storyboard */,
 				93139ECF2987FF4B0072F6FC /* Info.plist */,
+				93F5BF17299C01CD0058CCAB /* ReverseBrain.swift */,
 			);
 			path = Reverse;
 			sourceTree = "<group>";
@@ -263,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9353FBCF29925F20009721B2 /* ViewController.swift in Sources */,
+				93F5BF18299C01CD0058CCAB /* ReverseBrain.swift in Sources */,
 				93139EC22987FF490072F6FC /* AppDelegate.swift in Sources */,
 				93139EC42987FF490072F6FC /* SceneDelegate.swift in Sources */,
 			);
@@ -282,7 +285,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9353FBD32992612C009721B2 /* ReverseTests.swift in Sources */,
-				9353FBD029925F22009721B2 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
