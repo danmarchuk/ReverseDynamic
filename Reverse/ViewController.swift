@@ -30,12 +30,27 @@ class ViewController: UIViewController {
     
     
     @IBAction func segmentedControlAction(_ sender: UISegmentedControl) {
+        // default is chosen
         if sender.selectedSegmentIndex == 0 {
             customInputTextField.isHidden = true
             defaultReverseLabel.isHidden = false
-        } else if sender.selectedSegmentIndex == 1{
+            // use the default reverse function if the selected segment was switched to default
+            if let rev = userInputTextView.text {
+                reversedTextLabel.text = reverseBrain.defaultReverseFunction(rev)
+            }
+            
+            // custom is chosen
+        } else if sender.selectedSegmentIndex == 1 {
             customInputTextField.isHidden = false
             defaultReverseLabel.isHidden = true
+            // use the custom reverse function if the selected segment was switched to custom
+            if let rev = userInputTextView.text {
+                reversedTextLabel.text = reverseBrain.customReverseTheWords(rev, exclusion: "")
+                if let exc = customInputTextField.text {
+                    reversedTextLabel.text = reverseBrain.customReverseTheWords(rev, exclusion: exc)
+                }
+            }
+            
         }
     }
     
@@ -53,6 +68,9 @@ class ViewController: UIViewController {
         
         userInputTextView.addTarget(self, action: #selector(ViewController.textFieldDidChange(_:)), for: .editingChanged)
         customInputTextField.addTarget(self, action: #selector(ViewController.customTextFieldDidChange(_:)), for: .editingChanged)
+        
+
+
 
     }
     
@@ -147,8 +165,6 @@ extension ViewController: UITextFieldDelegate {
             if let rev = userInputTextView.text {
                 if let exc = customInputTextField.text {
                     reversedTextLabel.text = reverseBrain.customReverseTheWords(rev, exclusion: exc)
-                } else {
-                    reversedTextLabel.text = reverseBrain.defaultReverseFunction(rev)
                 }
             }
         } else if segmentedControlOutlet.selectedSegmentIndex == 0 {
@@ -159,6 +175,9 @@ extension ViewController: UITextFieldDelegate {
     }
     
 }
+
+// MARK: - segmentedControlValueChanged
+
 
 
 

@@ -12,6 +12,7 @@
 		93139EC92987FF490072F6FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93139EC72987FF490072F6FC /* Main.storyboard */; };
 		93139ECB2987FF4B0072F6FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93139ECA2987FF4B0072F6FC /* Assets.xcassets */; };
 		93139ECE2987FF4B0072F6FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93139ECC2987FF4B0072F6FC /* LaunchScreen.storyboard */; };
+		933B8027299D27A700ACE9EC /* ReverseBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F5BF17299C01CD0058CCAB /* ReverseBrain.swift */; };
 		9353FBCF29925F20009721B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93139EC52987FF490072F6FC /* ViewController.swift */; };
 		9353FBD32992612C009721B2 /* ReverseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F3B94029924F21001277AB /* ReverseTests.swift */; };
 		93F3B931299234EA001277AB /* ReverseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F3B930299234EA001277AB /* ReverseUITestsLaunchTests.swift */; };
@@ -285,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9353FBD32992612C009721B2 /* ReverseTests.swift in Sources */,
+				933B8027299D27A700ACE9EC /* ReverseBrain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
