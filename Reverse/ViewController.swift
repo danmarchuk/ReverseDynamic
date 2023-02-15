@@ -26,8 +26,22 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var changeButtonText: UIButton!
     
+    let reverseBrain = ReverseBrain()
+    
+    
+    @IBAction func segmentedControlAction(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
+            customInputTextField.isHidden = true
+            defaultReverseLabel.isHidden = false
+        } else if sender.selectedSegmentIndex == 1{
+            customInputTextField.isHidden = false
+            defaultReverseLabel.isHidden = true
+        }
+    }
+    
 
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
         userInputTextView.delegate = self
@@ -43,14 +57,25 @@ class ViewController: UIViewController {
     
     @IBAction func reverseButton(_ sender: UIButton) {
         
-        
-        if reversedTextLabel.text?.count == 0 {
+        if reversedTextLabel.text?.count == 0 && segmentedControlOutlet.selectedSegmentIndex == 0 {
             if let textToReverse = userInputTextView.text {
                 // reverseButton is Clicked
-                let separateWords = reverseFunction(text: textToReverse)
-                reversedTextLabel.text = separateWords
+                    let separateWords = reverseBrain.defaultReverseFunction(textToReverse)
+                    reversedTextLabel.text = separateWords
                 viewBecomesBlue()
                 changeButtonText.setTitle("Clear", for: .normal)
+                }
+        }
+        
+        else if reversedTextLabel.text?.count == 0 && segmentedControlOutlet.selectedSegmentIndex == 1 && customInputTextField != nil {
+            if let textToReverse = userInputTextView.text {
+                // reverseButton is Clicked
+                if let exception = customInputTextField.text {
+                    let separateWords = reverseBrain.customReverseTheWords(textToReverse, exclusion: exception)
+                    reversedTextLabel.text = separateWords
+                    viewBecomesBlue()
+                    changeButtonText.setTitle("Clear", for: .normal)
+                }
             }
         }
             // clear button is clicked
@@ -63,12 +88,6 @@ class ViewController: UIViewController {
             disableButton()
 
         }
-    }
-    
-    func reverseFunction(text: String) -> String {
-        let separateWords = text.components(separatedBy: " ")
-        let resultString = String(separateWords.map {$0.reversed()}.joined(separator: " "))
-        return resultString
     }
     
     
