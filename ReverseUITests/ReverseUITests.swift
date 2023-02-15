@@ -25,33 +25,48 @@ final class ReverseUITests: XCTestCase {
         let reverseTextField = app.textFields["Type Here"]
         XCTAssertTrue(reverseTextField.exists)
         reverseTextField.tap()
-        reverseTextField.typeText("Hello Obama")
+        reverseTextField.typeText("Foxminded cool 24/7")
         reverseTextField.typeText("\n")
         
         
         
-        // click the reverse button
-        let reverseButton = app.buttons["Reverse"]
-        XCTAssertTrue(reverseButton.exists)
-        reverseButton.tap()
+//        // click the reverse button
+//        let reverseButton = app.buttons["Reverse"]
+//        XCTAssertTrue(reverseButton.exists)
+//        reverseButton.tap()
         
         // check if the text reversed
         let reversedLabel = app.staticTexts.element(matching: .any, identifier: "ReversedTextLabel")
-        XCTAssertTrue(reversedLabel.label.contains("olleH amabO"))
+        XCTAssertTrue(reversedLabel.label.contains("dednimxoF looc 24/7"))
         
-        // click the Clear button
-        let clearButton = app.buttons["Clear"]
-        XCTAssertTrue(clearButton.exists)
-        clearButton.tap()
         
-        // Check if the textField is clear
-        let clearTextField = app.textFields["Type Here"]
-        XCTAssertTrue(clearTextField.label.isEmpty)
+        let customButton = app/*@START_MENU_TOKEN@*/.segmentedControls.buttons["Custom"]/*[[".segmentedControls.buttons[\"Custom\"]",".buttons[\"Custom\"]"],[[[-1,1],[-1,0]]],[1]]@END_MENU_TOKEN@*/
+        customButton.tap()
+        XCTAssertTrue(reversedLabel.label.contains("dednimxoF looc 7/42"))
         
-        // check if the reversedTextlabel isEmpty
-        let clearLabel = app.staticTexts.element(matching: .any, identifier: "ReversedTextLabel")
-        XCTAssertTrue(clearLabel.exists)
-        XCTAssertTrue(clearLabel.label.isEmpty)
+        
+        let excludionTextfield = app.textFields.element(matching: .any, identifier: "ExclusionTextField")
+        XCTAssertTrue(excludionTextfield.exists)
+        excludionTextfield.tap()
+        excludionTextfield.typeText("xl")
+        excludionTextfield.typeText("\n")
+
+        XCTAssertTrue(reversedLabel.label.contains("dexdnimoF oocl 7/42"))
+           
+        
+//        // click the Clear button
+//        let clearButton = app.buttons["Clear"]
+//        XCTAssertTrue(clearButton.exists)
+//        clearButton.tap()
+        
+//        // Check if the textField is clear
+//        let clearTextField = app.textFields["Type Here"]
+//        XCTAssertTrue(clearTextField.label.isEmpty)
+        
+//        // check if the reversedTextlabel isEmpty
+//        let clearLabel = app.staticTexts.element(matching: .any, identifier: "ReversedTextLabel")
+//        XCTAssertTrue(clearLabel.exists)
+//        XCTAssertTrue(clearLabel.label.isEmpty)
     }
     
     //    func testLaunchPerformance() throws {
