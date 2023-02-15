@@ -166,7 +166,7 @@
                     <navigationItem key="navigationItem" title="Reverse Words" id="7pS-ED-owF"/>
                     <connections>
                         <outlet property="changeButtonText" destination="gJO-J1-zld" id="hMU-v1-G2z"/>
-                        <outlet property="customInputTextField" destination="EpA-tt-oj1" id="8wS-JA-kxK"/>
+                        <outlet property="customInputTextField" destination="EpA-tt-oj1" id="Vhq-Q4-wdg"/>
                         <outlet property="defaultReverseLabel" destination="Ebh-aa-zgh" id="aV0-DA-7QS"/>
                         <outlet property="grayBlueView" destination="ckn-uN-Sib" id="Q3Q-PU-Mqe"/>
                         <outlet property="reversedTextLabel" destination="i85-HY-YWh" id="62S-4Q-2tt"/>

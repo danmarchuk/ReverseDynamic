@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var segmentedControlOutlet: UISegmentedControl!
     
-    @IBOutlet weak var customInputTextField: UILabel!
+    @IBOutlet weak var customInputTextField: UITextField!
     
     @IBOutlet weak var reversedTextLabel: UILabel!
     
@@ -51,6 +51,8 @@ class ViewController: UIViewController {
         
         customInputTextField.isHidden = true
         
+        userInputTextView.addTarget(self, action: #selector(ViewController.textFieldDidChange(_:)), for: .editingChanged)
+        customInputTextField.addTarget(self, action: #selector(ViewController.customTextFieldDidChange(_:)), for: .editingChanged)
 
     }
     
@@ -110,7 +112,7 @@ class ViewController: UIViewController {
     
 }
 
-
+// MARK: - UITextFieldDelegate
 extension ViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
             viewBecomesBlue()
@@ -129,7 +131,37 @@ extension ViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
     }
+    
+    // dynamically change the reversedLabel
+    @objc func textFieldDidChange(_ textField: UITextField) {
+        if segmentedControlOutlet.selectedSegmentIndex == 0 {
+            if let rev = userInputTextView.text {
+                reversedTextLabel.text = reverseBrain.defaultReverseFunction(rev)
+            }
+        }
+    }
+    
+    // dymanically change the reversedLabel if there is an exception
+    @objc func customTextFieldDidChange(_ textField: UITextField) {
+        if segmentedControlOutlet.selectedSegmentIndex == 1  {
+            if let rev = userInputTextView.text {
+                if let exc = customInputTextField.text {
+                    reversedTextLabel.text = reverseBrain.customReverseTheWords(rev, exclusion: exc)
+                } else {
+                    reversedTextLabel.text = reverseBrain.defaultReverseFunction(rev)
+                }
+            }
+        } else if segmentedControlOutlet.selectedSegmentIndex == 0 {
+            if let rev = userInputTextView.text {
+                reversedTextLabel.text = reverseBrain.defaultReverseFunction(rev)
+            }
+        }
+    }
+    
 }
+
+
+
 
 // MARK: - dismissKeyboard when tapped around
 extension ViewController {
