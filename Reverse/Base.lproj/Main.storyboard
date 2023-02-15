@@ -91,6 +91,7 @@
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EpA-tt-oj1">
                                                 <rect key="frame" x="10" y="8" width="353" height="40"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="ExclusionTextField"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="lXP-xg-ooN"/>
                                                 </constraints>
