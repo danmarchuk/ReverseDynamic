@@ -8,12 +8,20 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
     
 
     @IBOutlet weak var grayBlueView: UIView!
     
+    @IBOutlet weak var defaultReverseLabel: UILabel!
+    
+    @IBOutlet weak var segmentedControlOutlet: UISegmentedControl!
+    
+    @IBOutlet weak var customInputTextField: UILabel!
+    
     @IBOutlet weak var reversedTextLabel: UILabel!
+    
     @IBOutlet weak var userInputTextView: UITextField!
     
     @IBOutlet weak var changeButtonText: UIButton!
@@ -26,6 +34,10 @@ class ViewController: UIViewController {
         reversedTextLabel.textColor = UIColor.systemBlue
         self.hideKeyboardWhenTappedAround()
         disableButton()
+        
+        customInputTextField.isHidden = true
+        
+
     }
     
     
@@ -40,9 +52,9 @@ class ViewController: UIViewController {
                 viewBecomesBlue()
                 changeButtonText.setTitle("Clear", for: .normal)
             }
-            
+        }
             // clear button is clicked
-        } else if reversedTextLabel.text?.count != 0  {
+         else if reversedTextLabel.text?.count != 0  {
             reversedTextLabel.text = ""
             userInputTextView.text = ""
             changeButtonText.setTitle("Reverse", for: .normal)
@@ -58,6 +70,8 @@ class ViewController: UIViewController {
         let resultString = String(separateWords.map {$0.reversed()}.joined(separator: " "))
         return resultString
     }
+    
+    
     
     
     func viewBecomesBlue() {
