@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HL6-XV-KaU">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,14 +13,14 @@
             <objects>
                 <viewController id="ccO-BM-G93" customClass="ViewController" customModule="Reverse" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="thR-5O-Qb0">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="g6u-Am-6PB">
-                                <rect key="frame" x="10" y="44" width="580" height="556"/>
+                                <rect key="frame" x="10" y="103" width="373" height="715"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="s8K-ed-flP">
-                                        <rect key="frame" x="133.66666666666663" y="0.0" width="313" height="170"/>
+                                        <rect key="frame" x="30" y="0.0" width="313" height="170"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cO4-Si-2cQ">
                                                 <rect key="frame" x="0.0" y="0.0" width="313" height="50"/>
@@ -49,10 +50,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="nP3-G3-r78">
-                                        <rect key="frame" x="10" y="251.66666666666669" width="560" height="41"/>
+                                        <rect key="frame" x="10" y="232.66666666666669" width="353" height="41"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type Here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tlo-fY-juu">
-                                                <rect key="frame" x="0.0" y="0.0" width="560" height="40"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="353" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="cRV-08-l0G"/>
                                                 </constraints>
@@ -60,7 +61,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ckn-uN-Sib">
-                                                <rect key="frame" x="0.0" y="40" width="560" height="1"/>
+                                                <rect key="frame" x="0.0" y="40" width="353" height="1"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="rlN-D7-Hny"/>
@@ -72,8 +73,53 @@
                                             <constraint firstAttribute="trailing" secondItem="ckn-uN-Sib" secondAttribute="trailing" id="nuE-5V-utg"/>
                                         </constraints>
                                     </stackView>
+                                    <segmentedControl opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="9Tl-1H-3Ih">
+                                        <rect key="frame" x="0.0" y="336.66666666666669" width="373" height="41"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="EP1-Et-4gg"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="Default"/>
+                                            <segment title="Custom"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="segmentedControlAction:" destination="ccO-BM-G93" eventType="valueChanged" id="bR8-YC-oaf"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OS5-zU-k9Q">
+                                        <rect key="frame" x="0.0" y="439.33333333333337" width="373" height="50"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EpA-tt-oj1">
+                                                <rect key="frame" x="10" y="8" width="353" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="lXP-xg-ooN"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All characters except numbers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ebh-aa-zgh">
+                                                <rect key="frame" x="20" y="5" width="333" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="ufG-v9-v0I"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="Ebh-aa-zgh" firstAttribute="leading" secondItem="OS5-zU-k9Q" secondAttribute="leading" constant="20" id="2pO-kt-vdD"/>
+                                            <constraint firstItem="Ebh-aa-zgh" firstAttribute="centerY" secondItem="OS5-zU-k9Q" secondAttribute="centerY" id="8bH-D1-DBd"/>
+                                            <constraint firstAttribute="height" constant="50" id="ML7-7c-UQW"/>
+                                            <constraint firstAttribute="trailing" secondItem="EpA-tt-oj1" secondAttribute="trailing" constant="10" id="YB3-jG-Mz2"/>
+                                            <constraint firstItem="EpA-tt-oj1" firstAttribute="leading" secondItem="OS5-zU-k9Q" secondAttribute="leading" constant="10" id="dAo-FV-JlQ"/>
+                                            <constraint firstItem="EpA-tt-oj1" firstAttribute="top" secondItem="OS5-zU-k9Q" secondAttribute="topMargin" id="eNB-xl-FRZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ebh-aa-zgh" secondAttribute="trailing" constant="20" id="j1t-UZ-q5o"/>
+                                        </constraints>
+                                    </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i85-HY-YWh">
-                                        <rect key="frame" x="20" y="374.33333333333331" width="540" height="50"/>
+                                        <rect key="frame" x="20" y="552.33333333333337" width="333" height="50"/>
                                         <accessibility key="accessibilityConfiguration" identifier="ReversedTextLabel"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="qfN-tW-fce"/>
@@ -83,26 +129,27 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gJO-J1-zld">
-                                        <rect key="frame" x="20" y="506" width="540" height="50"/>
+                                        <rect key="frame" x="20" y="665" width="333" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="1Rf-fm-P9t"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Reverse"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="customIdentifier" value="reverseButton"/>
-                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="reverseButton:" destination="ccO-BM-G93" eventType="touchUpInside" id="Xpq-Ri-UJP"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="OS5-zU-k9Q" secondAttribute="trailing" id="CPI-ib-F8m"/>
                                     <constraint firstAttribute="trailing" secondItem="i85-HY-YWh" secondAttribute="trailing" constant="20" id="Ji6-cO-qGs"/>
                                     <constraint firstAttribute="trailing" secondItem="gJO-J1-zld" secondAttribute="trailing" constant="20" id="KyS-gY-cYX"/>
                                     <constraint firstItem="i85-HY-YWh" firstAttribute="leading" secondItem="g6u-Am-6PB" secondAttribute="leading" constant="20" id="NDZ-vB-BOS"/>
+                                    <constraint firstItem="9Tl-1H-3Ih" firstAttribute="leading" secondItem="g6u-Am-6PB" secondAttribute="leading" id="NWF-6X-i3C"/>
                                     <constraint firstItem="nP3-G3-r78" firstAttribute="leading" secondItem="g6u-Am-6PB" secondAttribute="leading" constant="10" id="bCc-Wb-Fto"/>
+                                    <constraint firstItem="OS5-zU-k9Q" firstAttribute="leading" secondItem="g6u-Am-6PB" secondAttribute="leading" id="dVa-1m-bLs"/>
                                     <constraint firstAttribute="trailing" secondItem="nP3-G3-r78" secondAttribute="trailing" constant="10" id="jK1-XR-EJv"/>
+                                    <constraint firstAttribute="trailing" secondItem="9Tl-1H-3Ih" secondAttribute="trailing" id="mat-Fo-TIR"/>
                                     <constraint firstItem="gJO-J1-zld" firstAttribute="leading" secondItem="g6u-Am-6PB" secondAttribute="leading" constant="20" id="oDv-pl-nQi"/>
                                 </constraints>
                             </stackView>
@@ -119,8 +166,11 @@
                     <navigationItem key="navigationItem" title="Reverse Words" id="7pS-ED-owF"/>
                     <connections>
                         <outlet property="changeButtonText" destination="gJO-J1-zld" id="hMU-v1-G2z"/>
+                        <outlet property="customInputTextField" destination="EpA-tt-oj1" id="8wS-JA-kxK"/>
+                        <outlet property="defaultReverseLabel" destination="Ebh-aa-zgh" id="aV0-DA-7QS"/>
                         <outlet property="grayBlueView" destination="ckn-uN-Sib" id="Q3Q-PU-Mqe"/>
                         <outlet property="reversedTextLabel" destination="i85-HY-YWh" id="62S-4Q-2tt"/>
+                        <outlet property="segmentedControlOutlet" destination="9Tl-1H-3Ih" id="OKm-Ml-TXX"/>
                         <outlet property="userInputTextView" destination="Tlo-fY-juu" id="8cL-e1-zec"/>
                     </connections>
                 </viewController>
