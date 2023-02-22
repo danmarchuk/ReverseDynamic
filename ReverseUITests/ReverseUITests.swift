@@ -29,12 +29,6 @@ final class ReverseUITests: XCTestCase {
         reverseTextField.typeText("\n")
         
         
-        
-//        // click the reverse button
-//        let reverseButton = app.buttons["Reverse"]
-//        XCTAssertTrue(reverseButton.exists)
-//        reverseButton.tap()
-        
         // check if the text reversed
         let reversedLabel = app.staticTexts.element(matching: .any, identifier: "ReversedTextLabel")
         XCTAssertTrue(reversedLabel.label.contains("dednimxoF looc 24/7"))
@@ -53,28 +47,6 @@ final class ReverseUITests: XCTestCase {
 
         XCTAssertTrue(reversedLabel.label.contains("dexdnimoF oocl 7/42"))
            
-        
-//        // click the Clear button
-//        let clearButton = app.buttons["Clear"]
-//        XCTAssertTrue(clearButton.exists)
-//        clearButton.tap()
-        
-//        // Check if the textField is clear
-//        let clearTextField = app.textFields["Type Here"]
-//        XCTAssertTrue(clearTextField.label.isEmpty)
-        
-//        // check if the reversedTextlabel isEmpty
-//        let clearLabel = app.staticTexts.element(matching: .any, identifier: "ReversedTextLabel")
-//        XCTAssertTrue(clearLabel.exists)
-//        XCTAssertTrue(clearLabel.label.isEmpty)
     }
     
-    //    func testLaunchPerformance() throws {
-    //        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
-    //            // This measures how long it takes to launch your application.
-    //            measure(metrics: [XCTApplicationLaunchMetric()]) {
-    //                XCUIApplication().launch()
-    //            }
-    //        }
-    //    }
 }

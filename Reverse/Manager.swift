@@ -7,36 +7,34 @@
 
 import Foundation
 
-struct ReverseBrain {
+struct Manager {
     
     func customReverseTheWords(_ string: String, exclusion: String) -> String {
         // create an array of words
         var words = string.components(separatedBy: .whitespaces)
         // for every index and word in the array
         for (index, word) in words.enumerated() {
-            // assign each word to a var  so we can remove or add letters to it
-            var woord = word
+
             // create dictionaries where we'll store indormation letters and theri position
             var excludedCharDict: [Int : String.Element] = [:]
             var everyCharDict: [Int : String.Element] = [:]
             
-    //        var testDict: [Int: [String.Index : String.Element]] = [:]
             // for every letter in exclusion
-            for (indexOfTheChar, char) in woord.enumerated() {
-    //            let everyCharIndex = woord.index(woord.startIndex, offsetBy: indexOfTheChar)
+            for (indexOfTheChar, char) in word.enumerated() {
+                
                 everyCharDict[indexOfTheChar] = char
                 // for every index and charater in a word
                 for letter in exclusion   {
                     // if word contains a letter
-                    if woord.contains(letter) {
+                    if word.contains(letter) {
                         // if the character of the word is the same as an exclusion
                         if char == letter {
-    //                        let myIndex = woord.index(woord.startIndex, offsetBy: indexOfTheChar)
+                            // add the character to the excludedCharDict
                             excludedCharDict[indexOfTheChar] = char
-    //                        testDict[indexOfTheChar] = [myIndex:char]
                         }
-                    } else if !woord.contains(letter) {
-                        words[index] = String(woord.reversed())
+                        // if the word doesn't contain the letter just reverse it
+                    } else if !word.contains(letter) {
+                        words[index] = String(word.reversed())
                     }
                 }
             }
@@ -57,8 +55,7 @@ struct ReverseBrain {
             let sortedArray = everyCharDict.sorted(by: { $0.0 < $1.0 })
 
             // put the sorted characters in the word
-            for (num, char) in sortedArray {
-                let myIndex = testWord.index(testWord.startIndex, offsetBy: num)
+            for (_, char) in sortedArray {
                 testWord.insert(char, at: testWord.startIndex)
             }
             
@@ -75,8 +72,8 @@ struct ReverseBrain {
         }
         
         // a very "elegant" way of putting the words together
-        var sentence = words.joined(separator: " ")
-        var wordss = sentence.components(separatedBy: "       " )
+        let sentence = words.joined(separator: " ")
+        let wordss = sentence.components(separatedBy: "       " )
         return wordss.joined(separator: " ")
     }
     

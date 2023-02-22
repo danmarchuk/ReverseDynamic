@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var changeButtonText: UIButton!
     
-    let reverseBrain = ReverseBrain()
+    let reverseBrain = Manager()
     
     
     @IBAction func segmentedControlAction(_ sender: UISegmentedControl) {
@@ -175,10 +175,6 @@ extension ViewController: UITextFieldDelegate {
     }
     
 }
-
-// MARK: - segmentedControlValueChanged
-
-
 
 
 
